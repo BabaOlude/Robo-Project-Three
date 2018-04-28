@@ -5,3 +5,9 @@ In this project I brought together everything I learned about perception in thre
 Rubric Components
 
 Code
+
+What Worked
+
+What Didn't Work
+
+Future Improvements
