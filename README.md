@@ -4,58 +4,26 @@ This is my submission for project three of the Udacity RoboND. I will be using a
 
 In this repo you'll find the files needed in order to perform the project. You can find the output messages in the yaml files.
 
-# 3D Perception
-Before starting any work on this project, please complete all steps for [Exercise 1, 2 and 3](https://github.com/udacity/RoboND-Perception-Exercises). At the end of Exercise-3 you have a pipeline that can identify points that belong to a specific object.
+Rubric Points:
+Exercise 1 - The pcl_callback() function within the template Python script has been filled out to include filtering and RANSAC plane fitting.
+Exercise 2 - Steps for cluster segmentation have been added to the pcl_callback() function in the template Python script.
+Exercise 3 - Both compute_color_histograms() and compute_normal_histograms() functions have been filled out and SVM has been trained using train_svm.py. Please see below for a snapshot of my normalized confusion matrix (output from train_svm.py in your writeup / README. Object recognition steps have been implemented in the pcl_callback() function within template Python script.
+This repo contains the writeup.md file and the following documents:
+    object_recognition.py
+    capture_features.py
+    train_svm.py
+    output_1.yaml, output_2.yaml, and output_3.yaml
+In order to setup the project I followed the instructions in the three perception exercises. I order to perform the project I followed the instructions in the perception project from the curriculum. 
+Once those steps were complete I was ready to go. I had the sensor_stick and pr2_robot packages installed. At this point I copied my object_recognition.py script to my scripts directory in catkin. Then I copied features.py to my sensor stick directory in catkin. The instructions then allowed me to train my model and do object recognition.
+After the creation of the perception pipeline I instituted the object recognition. The main part of the project was running the pick lists from the yaml files and demonstrating the object recognition. 
+In order to fulfill the requirements in the curriculum my code recognized 100% of the object in test1.world, 80% of the objects in test2.world, and 75% of the objects in test3.world. My code created the output files output_1.yaml, output_2.yaml, and output_3.yaml. 
 
-In this project, you must assimilate your work from previous exercises to successfully complete a tabletop pick and place operation using PR2.
-
-The PR2 has been outfitted with an RGB-D sensor much like the one you used in previous exercises. This sensor however is a bit noisy, much like real sensors.
-
-Given the cluttered tabletop scenario, you must implement a perception pipeline using your work from Exercises 1,2 and 3 to identify target objects from a so-called “Pick-List” in that particular order, pick up those objects and place them in corresponding dropboxes.
 
 # Project Setup
 For this setup, catkin_ws is the name of active ROS Workspace, if your workspace name is different, change the commands accordingly
 If you do not have an active ROS workspace, you can create one by:
 
-```sh
-$ mkdir -p ~/catkin_ws/src
-$ cd ~/catkin_ws/
-$ catkin_make
-```
 
-Now that you have a workspace, clone or download this repo into the src directory of your workspace:
-```sh
-$ cd ~/catkin_ws/src
-$ git clone https://github.com/udacity/RoboND-Perception-Project.git
-```
-### Note: If you have the Kinematics Pick and Place project in the same ROS Workspace as this project, please remove the 'gazebo_grasp_plugin' directory from the `RoboND-Perception-Project/` directory otherwise ignore this note. 
-
-Now install missing dependencies using rosdep install:
-```sh
-$ cd ~/catkin_ws
-$ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
-```
-Build the project:
-```sh
-$ cd ~/catkin_ws
-$ catkin_make
-```
-Add following to your .bashrc file
-```
-export GAZEBO_MODEL_PATH=~/catkin_ws/src/RoboND-Perception-Project/pr2_robot/models:$GAZEBO_MODEL_PATH
-```
-
-If you haven’t already, following line can be added to your .bashrc to auto-source all new terminals
-```
-source ~/catkin_ws/devel/setup.bash
-```
-
-To run the demo:
-```sh
-$ cd ~/catkin_ws/src/RoboND-Perception-Project/pr2_robot/scripts
-$ chmod u+x pr2_safe_spawner.sh
-$ ./pr2_safe_spawner.sh
-```
 ![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
 
 
