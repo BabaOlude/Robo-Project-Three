@@ -2,6 +2,8 @@
 
 This is my submission for project three of the Udacity RoboND. I will be using active and passive sensors and an RGB-D camera in a simulated environment to demonstrate a PR2 robot picking and placing objects into bins.
 
+In this repo you'll find the files needed in order to perform the project. You can find the output messages in the yaml files.
+
 # 3D Perception
 Before starting any work on this project, please complete all steps for [Exercise 1, 2 and 3](https://github.com/udacity/RoboND-Perception-Exercises). At the end of Exercise-3 you have a pipeline that can identify points that belong to a specific object.
 
