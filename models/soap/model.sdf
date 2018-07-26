@@ -1,35 +1,35 @@
 
 <?xml version="1.0" ?>
 <sdf version="1.4">
-  <model name="book">
-    <link name="book_link">
+  <model name="soap">
+    <link name="soap_link">
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.08</mass>
       </inertial>
 
-      <visual name="book_visual">
+      <visual name="soap_visual">
         <pose>0 0 0 0 0 0</pose>
         <material>
           <script>
-            <uri>model://book/materials/scripts</uri>
-            <uri>model://book/materials/textures</uri>
-            <name>book</name>
+            <uri>model://soap/materials/scripts</uri>
+            <uri>model://soap/materials/textures</uri>
+            <name>soap</name>
           </script>
         </material>
         <geometry>
           <mesh>
-            <uri>model://book/meshes/book.dae</uri>
+            <uri>model://soap/meshes/soap.dae</uri>
           </mesh>
         </geometry>
       </visual>
 
 
-      <collision name="book_collision">
-        <pose>0 0 0.103 0 0 2.3</pose>
+      <collision name="soap_collision">
+        <pose>0.02 0.002 0.05 0 0 -1.05</pose>
         <geometry>
           <box>
-            <size>0.13 0.02 0.206</size>
+            <size>0.14 0.065 0.1</size>
           </box>
         </geometry>
       </collision>
