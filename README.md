@@ -1,30 +1,9 @@
 [![Udacity - Robotics NanoDegree Program](https://s3-us-west-1.amazonaws.com/udacity-robotics/Extra+Images/RoboND_flag.png)](https://www.udacity.com/robotics)
+
 # RoboND-Perception-Exercises
 These exercises are part of the perception lessons in the [Udacity Robotics Nanodegree Program](https://www.udacity.com/robotics) In these exercises, you will perform object segmentation on 3D point cloud data using `python-pcl` to leverage the power of the [Point Cloud Library](http://pointclouds.org/).  In Exercise 1, you'll get some practice performing filtering and RANSAC plane segmentation, and in Exercise-2 you'll write a ROS node to perform those functions as well as Euclidean Clustering for object segmentation! Once you have cloned or downloaded this repo in the provided VM, you can follow the steps given below for installation.
 
-## Installation
-### Install cython
-```
-$ sudo pip install cython
-```
 
-### Build and Install pcl-python
-```
-$ cd ~/RoboND-Perception-Exercises/python-pcl
-$ python setup.py build
-$ sudo python setup.py install
-```
-
-### Install pcl-tools
-```
-$ sudo apt-get install pcl-tools
-```
-
-
-
-## Documentation for `pcl_helper.py`
-
-`pcl_helper.py` contains useful functions for working with point cloud data with ROS and PCL.  The file itself is located in `Exercise-2/sensor_stick/scripts/`.  While the helper functions are required for Exercise-2, they could also come in handy if you want to explore more deeply in Exercise-1.  Here's a brief description of the contents:
  
 #### Functions:
 `random_color_gen()` 
@@ -33,40 +12,7 @@ Generates a random set of r,g,b values
 Return: a 3-tuple with r,g,b values (range 0-255)
 ```
 
-`ros_to_pcl(sensor_msgs/PointCloud2)` 
-```
-Converts sensor_msgs/PointCloud2 to XYZRGB Point Cloud
-Return: pcl.PointCloud_PointXYZRGB
-```
 
-`pcl_to_ros(pcl.PointCloud_PointXYZRGB)` 
-```
-Converts XYZRGB Point Cloud to sensor_msgs/PointCloud2
-Return: sensor_msgs/PointCloud2
-```
-
-`XYZRGB_to_XYZ(XYZRGB_cloud)` 
-```
-Converts XYZRGB Point Cloud to XYZ Point CLoud
-Return: pcl.PointCloud
-```
-
-`XYZ_to_XYZRGB(XYZ_cloud, color)` 
-```
-Takes a 3-tuple as color and adds it to XYZ Point Cloud
-Return: pcl.PointCloud_PointXYZRGB
-```
-
-`rgb_to_float(color)`
-```
-Converts 3-tuple color to a single float32
-Return: rgb packed as a single float32
-```
-
-`get_color_list(cluster_count)` 
-```
-Creates a list of 3-tuple (rgb) with length of the list = cluster_count
-Return: get_color_list.color_list
 ```
 ## Project: Perception Pick & Place
 ### Writeup Template: You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
@@ -83,16 +29,15 @@ Return: get_color_list.color_list
 6. Calculate the centroid (average in x, y and z) of the set of points belonging to that each object.
 7. Create ROS messages containing the details of each object (name, pick_pose, etc.) and write these messages out to `.yaml` files, one for each of the 3 scenarios (`test1-3.world` in `/pr2_robot/worlds/`).  [See the example `output.yaml` for details on what the output should look like.](https://github.com/udacity/RoboND-Perception-Project/blob/master/pr2_robot/config/output.yaml)  
 8. Submit a link to your GitHub repo for the project or the Python code for your perception pipeline and your output `.yaml` files (3 `.yaml` files, one for each test world).  You must have correctly identified 100% of objects from `pick_list_1.yaml` for `test1.world`, 80% of items from `pick_list_2.yaml` for `test2.world` and 75% of items from `pick_list_3.yaml` in `test3.world`.
-9. Congratulations!  Your Done!
+
 
 # Extra Challenges: Complete the Pick & Place
 7. To create a collision map, publish a point cloud to the `/pr2/3d_map/points` topic and make sure you change the `point_cloud_topic` to `/pr2/3d_map/points` in `sensors.yaml` in the `/pr2_robot/config/` directory. This topic is read by Moveit!, which uses this point cloud input to generate a collision map, allowing the robot to plan its trajectory.  Keep in mind that later when you go to pick up an object, you must first remove it from this point cloud so it is removed from the collision map!
-8. Rotate the robot to generate collision map of table sides. This can be accomplished by publishing joint angle value(in radians) to `/pr2/world_joint_controller/command`
-9. Rotate the robot back to its original state.
-10. Create a ROS Client for the “pick_place_routine” rosservice.  In the required steps above, you already created the messages you need to use this service. Checkout the [PickPlace.srv](https://github.com/udacity/RoboND-Perception-Project/tree/master/pr2_robot/srv) file to find out what arguments you must pass to this service.
+
+
 11. If everything was done correctly, when you pass the appropriate messages to the `pick_place_routine` service, the selected arm will perform pick and place operation and display trajectory in the RViz window
 12. Place all the objects from your pick list in their respective dropoff box and you have completed the challenge!
-13. Looking for a bigger challenge?  Load up the `challenge.world` scenario and see if you can get your perception pipeline working there!
+
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/1067/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -101,16 +46,6 @@ Return: get_color_list.color_list
 ### Writeup / README
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
-
-You're reading it!
-
-### Exercise 1, 2 and 3 pipeline implemented
-#### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
-
-#### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
-
-#### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
-Here is an example of how to include an image in your writeup.
 
 ![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
 
