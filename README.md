@@ -27,23 +27,24 @@ These exercises are part of the perception lessons in the [Udacity Robotics Nano
 
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/1067/view) Points
-### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
-
----
-### Writeup / README
-
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
 
 ![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
 
+#### Rubric Points 
+1) All your python code (make sure to add comments at appropriate places in your code)
+2) Three output yaml files that contain PickPlace request parameters: output_1.yaml, output_2.yaml, output_3.yaml.
+3) Writeup report (md or pdf file)
+
 ### Pick and Place Setup
 
-#### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
-
-And here's another image! 
+See my results:
+Example - `test*.world`
+Example - `pick_list_*.yaml`
+ 
 ![demo-2](https://user-images.githubusercontent.com/20687560/28748286-9f65680e-7468-11e7-83dc-f1a32380b89c.png)
 
-Spend some time at the end to discuss your code, what techniques you used, what worked and why, where the implementation might fail and how you might improve it if you were going to pursue this project further.  
+Code Discussion: 
+I created my code based on the Udacity curriculum. I basically followed along and created code to match each question that was asked of students. I developed the code to get the results in each step until I was finished. I learned a lot. I think my code would will work under many different circumstances.   
 
 
 
