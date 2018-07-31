@@ -4,20 +4,7 @@
 These exercises are part of the perception lessons in the [Udacity Robotics Nanodegree Program](https://www.udacity.com/robotics) In these exercises, you will perform object segmentation on 3D point cloud data using `python-pcl` to leverage the power of the [Point Cloud Library](http://pointclouds.org/).  In Exercise 1, you'll get some practice performing filtering and RANSAC plane segmentation, and in Exercise-2 you'll write a ROS node to perform those functions as well as Euclidean Clustering for object segmentation! Once you have cloned or downloaded this repo in the provided VM, you can follow the steps given below for installation.
 
 
- 
-#### Functions:
-`random_color_gen()` 
-```
-Generates a random set of r,g,b values
-Return: a 3-tuple with r,g,b values (range 0-255)
-```
-
-
-```
 ## Project: Perception Pick & Place
-### Writeup Template: You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
 
 
 # Required Steps for a Passing Submission:
