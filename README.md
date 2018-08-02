@@ -6,6 +6,12 @@ These exercises are part of the perception lessons in the [Udacity Robotics Nano
 
 ## Project: Perception Pick & Place
 
+## [Rubric](https://review.udacity.com/#!/rubrics/1067/view) Points
+
+![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
+
+#### Rubric Points 
+1) My python code 
 
 # Required Steps for a Passing Submission:
 1. Extract features and train an SVM model on new objects (see `pick_list_*.yaml` in `/pr2_robot/config/` for the list of models you'll be trying to identify). 
@@ -15,17 +21,10 @@ These exercises are part of the perception lessons in the [Udacity Robotics Nano
 5. Perform object recognition on these objects and assign them labels (markers in RViz).
 6. Calculate the centroid (average in x, y and z) of the set of points belonging to that each object.
 7. Create ROS messages containing the details of each object (name, pick_pose, etc.) and write these messages out to `.yaml` files, one for each of the 3 scenarios (`test1-3.world` in `/pr2_robot/worlds/`).  [See the example `output.yaml` for details on what the output should look like.](https://github.com/udacity/RoboND-Perception-Project/blob/master/pr2_robot/config/output.yaml)  
-8. Submit a link to your GitHub repo for the project or the Python code for your perception pipeline and your output `.yaml` files (3 `.yaml` files, one for each test world).  You must have correctly identified 100% of objects from `pick_list_1.yaml` for `test1.world`, 80% of items from `pick_list_2.yaml` for `test2.world` and 75% of items from `pick_list_3.yaml` in `test3.world`.
+8. Submit a link to your GitHub repo for the project or the Python code for your perception pipeline and your output `.yaml` files (3 `.yaml` files, one for each test world).  You must have correctly identified 100% of objects from `pick_list_1.yaml` for `test1.world`, 80% of items from `pick_list_2.yaml` for `test2.world` and 75% of items from `pick_list_3.yaml` in `test3.world
 
+2) Yaml files that contain PickPlace request parameters: output_1.yaml, output_2.yaml, output_3.yaml.
 
-## [Rubric](https://review.udacity.com/#!/rubrics/1067/view) Points
-
-![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
-
-#### Rubric Points 
-1) All your python code (make sure to add comments at appropriate places in your code)
-2) Three output yaml files that contain PickPlace request parameters: output_1.yaml, output_2.yaml, output_3.yaml.
-3) Writeup report (md or pdf file)
 
 ### Pick and Place Setup
 
@@ -37,6 +36,3 @@ Example - `pick_list_*.yaml`
 
 Code Discussion: 
 I created my code based on the Udacity curriculum. I basically followed along and created code to match each question that was asked of students. I developed the code to get the results in each step until I was finished. I learned a lot. I think my code would will work under many different circumstances.   
-
-
-
