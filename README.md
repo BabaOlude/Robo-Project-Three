@@ -2,11 +2,9 @@
 
 ## Project: Perception Pick & Place
 
-## [Rubric](https://review.udacity.com/#!/rubrics/1067/view) Points
-
 ![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
 
-#### Rubric Points 
+## [Rubric Points](https://review.udacity.com/#!/rubrics/1067/view) Points 
 1) My python code 
 
 # My Steps:
@@ -16,14 +14,12 @@
 4. I applied Euclidean clustering to create separate clusters for individual items.
 5. I performed object recognition on these objects and assigned them labels (RViz).
 6. I calculated the centroid (average in x, y and z) of the set of points belonging to that each object.
-7. I created ROS messages containing the details of each object (name, pick_pose, etc.) and wrote these messages out to `.yaml` files, one for each of the 3 scenarios (`test1-3.world` in `/pr2_robot/worlds/`).(https://github.com/udacity/RoboND-Perception-Project/blob/master/pr2_robot/config/output.yaml)  
-8. 
+7. I created ROS messages containing the details of each object (name, pick_pose, etc.) and wrote these messages out to `.yaml` files, one for each of the 3 scenarios (`test1-3.world` in `/pr2_robot/worlds/`).(https://github.com/udacity/RoboND-Perception-Project/blob/master/pr2_robot/config/output.yaml)   
 
 # My Results:
 I identified 100% of objects from `pick_list_1.yaml` for `test1.world`, 80% of items from `pick_list_2.yaml` for `test2.world` and 75% of items from `pick_list_3.yaml` in `test3.world
 
 #### Picture Output: Yaml files that contain PickPlace request parameters: output_1.yaml, output_2.yaml, output_3.yaml.
-
 
 ### Pick and Place Setup
 
