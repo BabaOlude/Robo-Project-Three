@@ -2,9 +2,6 @@
 
 ## Project: Perception Pick & Place
 
-## [Rubric Points](https://review.udacity.com/#!/rubrics/1067/view) Points 
-1) My python code 
-
 # My Steps:
 1. I extracted features and trained an SVM model on new objects 
 2. I wrote a ROS node and subscribed to `/pr2/world/points` 
