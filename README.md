@@ -18,11 +18,5 @@
 
 ### Pick and Place Setup
 
-See my results:
-Example - `test*.world`
-Example - `pick_list_*.yaml`
- 
-![demo-2](https://user-images.githubusercontent.com/20687560/28748286-9f65680e-7468-11e7-83dc-f1a32380b89c.png)
-
 Code Discussion: 
 I created my code based on the Udacity curriculum. I basically followed along and created code to match each question that was asked of students. I developed the code to get the results in each step until I was finished. I learned a lot. I think my code would will work under many different circumstances.   
