@@ -14,8 +14,6 @@
 6. I calculated the centroid (average in x, y and z) of the set of points belonging to that each object.
 7. I created ROS messages containing the details of each object (name, pick_pose, etc.) and wrote these messages out to `.yaml` files, one for each of the 3 scenarios (`test1-3.world` in `/pr2_robot/worlds/`).
 
-#### Picture Output: Yaml files that contain PickPlace request parameters: output_1.yaml, output_2.yaml, output_3.yaml.
-
 ### Pick and Place Setup
 
 Code Discussion: 
